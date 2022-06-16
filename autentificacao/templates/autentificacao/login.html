@@ -1,31 +1,88 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-    <style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: rgb(228, 228, 228);
+    }
 
-        .main-header-container {
-            background: greenyellow;
-            padding: 10px 10px 10px;
-        }
+    .container-login {
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 50px 80px;
+      border-radius: 15px;
+      text-align: center;
+    }
 
-    </style>
+    .login {
+      transform: translateY(-5%);
+    }
+
+    input {
+      padding: 15px;
+      border-color: black;
+      border-radius: 10px;
+    }
+
+    button {
+      background-color: gray;
+      border: none;
+      padding: 15px;
+      width: 100%;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45C4B0;
+    }
+
+    header {
+      background-color: #002333;
+      text-align: center;
+      padding: 12px;
+      font-size: 16px;
+      color: white;
+    }
+  </style>
+
 </head>
+
 <body>
-    <header class='main-header-container'>
-        <div class="main-header container">
-            <h1 class="main-title">REQUERIMENTOS</h1>
-        </div>
-    </header>
+  <header>
+    <h1>REQUERIMENTOS</h1>
+  </header>
+
+  <div class="container-login">
+    <div class="login">
+      <h1>LOGIN</h1>
+      <br>
+      <input type="text" placeholder="Nome">
+      <br><br>
+      <input type="password" placeholder="Senha">
+      <br><br>
+      <button>Enviar</button>
+    </div>
+
+  </div>
 </body>
+
 </html>
