@@ -1,26 +1,40 @@
 {% extends 'global/base.html' %}
 {% block content %}
 <form action="">
-  <!-- Email input -->
-  <div class="container-login">
-    <h1 class="text-center">Login</h1>
-    <div class="form-outline mb-3">
-      <label class="form-label" for="form2Example1">Email</label>
-      <input type="email" id="form2Example1" class="form-control" />
+  <!-- Email input container-login-->
+  <div class="d-flex justify-content-center mt-5">
+    <div class="card" style="width: 24rem; padding: 2rem;">
+
+      <h1 class="card-title text-center">Login</h1>
+
+      <div class="form-outline mb-3">
+        <label class="form-label" for="form2Example1">Email</label>
+        <input type="email" id="form2Example1" class="form-control" />
+      </div>
+      <div class="form-outline mb-3">
+        <label class="form-label" for="form2Example1">Senha</label>
+        <input type="password" id="form2Example1" class="form-control" />
+      </div>
+
+      <div class="row mb-4">
+        <div class="col d-flex justify-content-center">
+          <!-- Checkbox -->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+            <label class="form-check-label" for="form2Example31"> Lembrar de mim </label>
+          </div>
+        </div>
+        <div class="col">
+          <!-- Simple link -->
+          <a href="#!">Esqueceu a senha?</a>
+        </div>
+      </div>
+
+      <div class="col-12 d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="submit">Entrar</button>
+      </div>
     </div>
-    <div class="form-outline mb-3">
-      <label class="form-label" for="form2Example1">Senha</label>
-      <input type="password" id="form2Example1" class="form-control" />
-    </div>
-    <div class="form-check margin">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        Lembrar de mim
-      </label>
-    </div>
-    <div class="col-12">
-      <button class="btn btn-primary" type="submit">Entrar</button>
-    </div>
+
   </div>
 </form>
 {% endblock content %}
