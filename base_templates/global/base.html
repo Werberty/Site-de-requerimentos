@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     
 <head>
     {% include 'requerimentos/partials/head.html' %}
+    <title>{% block title %}{% endblock title %} Requerimentos</title>
 </head>
 
 <body>
     {% include 'requerimentos/partials/header.html' %}
 
-    <main class="main-content-container">
-        {% block content %}{% endblock content %}
-    </main>
+    
+    {% block content %}{% endblock content %}
+    
 
     {% include 'requerimentos/partials/footer.html' %}
 

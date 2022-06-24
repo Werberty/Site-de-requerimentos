@@ -1,8 +1,10 @@
 {% extends 'global/base.html' %}
 
+{% block title %}Home |{% endblock title %}
+
 {% block content %}
 
-    <form class="row g-3 d-flex m-5">
+    <form class="row g-3 d-flex m-5 m-5">
             <div class="col-md-6">
                 <label for="exampleFormControlInput1" class="form-label">Requerente</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1">
@@ -14,7 +16,7 @@
 
             <div class="col-md-2">
                 <label for="exampleFormControlInput1" class="form-label">Data de nascimento</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1"  placeholder="EX: dd/mm/aaa">
+                <input type="date" class="form-control" id="exampleFormControlInput1"  placeholder="EX: dd/mm/aaa">
             </div>
             <div class="col-md-4">
                 <label for="exampleFormControlInput1" class="form-label">Naturalidade</label>
@@ -69,7 +71,7 @@
                 <label for="exampleFormControlTextarea1" class="form-label">Justificar</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="formFileMultiple" class="form-label">Anexo</label>
                 <input class="form-control" type="file" id="formFileMultiple" multiple>
             </div>
