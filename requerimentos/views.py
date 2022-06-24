@@ -5,5 +5,5 @@ def home(request):
     return render(request, 'requerimentos/pages/home.html')
 
 
-def solicitacao(request):
-    return render(request, 'requerimentos/pages/solicitacao.html')
+def historico(request):
+    return render(request, 'requerimentos/pages/historico.html')
