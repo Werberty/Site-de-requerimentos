@@ -3,84 +3,89 @@
 {% block title %}Home |{% endblock title %}
 
 {% block content %}
+<h1 class="text-center mt-4">Solicite seu requerimento</h1>
 
-    <form class="row g-3 d-flex m-5 m-5">
-            <div class="col-md-6">
-                <label for="exampleFormControlInput1" class="form-label">Requerente</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1">
-            </div>
-            <div class="col-md-6">
-                <label for="exampleFormControlInput1" class="form-label">N° de matricula</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1">
-            </div>
+<div class="d-flex justify-content-center mt-4">
+    <div class="card" style="width: 65rem;">
+        <form class="row g-3 d-flex m-4">
+                <div class="col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label">Requerente</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                </div>
+                <div class="col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label">N° de matricula</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                </div>
 
-            <div class="col-md-2">
-                <label for="exampleFormControlInput1" class="form-label">Data de nascimento</label>
-                <input type="date" class="form-control" id="exampleFormControlInput1"  placeholder="EX: dd/mm/aaa">
-            </div>
-            <div class="col-md-4">
-                <label for="exampleFormControlInput1" class="form-label">Naturalidade</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1">
-            </div>
-            <div class="col-md-6">
-                <label for="exampleFormControlInput1" class="form-label">Filiação</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1">
-            </div>
+                <div class="col-md-2">
+                    <label for="exampleFormControlInput1" class="form-label">Data de nascimento</label>
+                    <input type="date" class="form-control" id="exampleFormControlInput1"  placeholder="EX: dd/mm/aaa">
+                </div>
+                <div class="col-md-4">
+                    <label for="exampleFormControlInput1" class="form-label">Naturalidade</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                </div>
+                <div class="col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label">Filiação</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                </div>
 
-            <div class="col-md-2">
-                <label for="exampleFormControlInput1" class="form-label">Curso</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1"  >
-            </div>
-            <div class="col-md-2">
-                <label for="exampleFormControlInput1" class="form-label">Periodo</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1">
-            </div>
-            <div class="col-md-4">
-                <label for="exampleFormControlInput1" class="form-label">Turno</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1">
-            </div>
-            <div class="col-md-4">
-                <label for="exampleFormControlInput1" class="form-label">Telefone</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="EX: (00) 00000-0000">
-            </div>
+                <div class="col-md-2">
+                    <label for="exampleFormControlInput1" class="form-label">Curso</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"  >
+                </div>
+                <div class="col-md-2">
+                    <label for="exampleFormControlInput1" class="form-label">Periodo</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                </div>
+                <div class="col-md-4">
+                    <label for="exampleFormControlInput1" class="form-label">Turno</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                </div>
+                <div class="col-md-4">
+                    <label for="exampleFormControlInput1" class="form-label">Telefone</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="EX: (00) 00000-0000">
+                </div>
 
-            <div class="col-md-4">
-                <label for="exampleFormControlInput1" class="form-label">Tipo de requerimento</label>
-                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Escolha um tipo...">
-                <datalist id="datalistOptions">
-                    <option value="2° via">
-                    <option value="Aproveitamento de disciplina">
-                    <option value="Matricula fora do prazo">
-                    <option value="Declaração">
-                    <option value="Diploma">
-                    <option value="Reabertura de matricula">
-                    <option value="Segunda chamada">
-                    <option value="Reingresso">
-                    <option value="Trancamento de disciplina">
-                    <option value="Trancamento de matricula">
-                    <option value="Outros">
-                </datalist>
-            </div>
+                <div class="col-md-4">
+                    <label for="exampleFormControlInput1" class="form-label">Tipo de requerimento</label>
+                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Escolha um tipo...">
+                    <datalist id="datalistOptions">
+                        <option value="2° via">
+                        <option value="Aproveitamento de disciplina">
+                        <option value="Matricula fora do prazo">
+                        <option value="Declaração">
+                        <option value="Diploma">
+                        <option value="Reabertura de matricula">
+                        <option value="Segunda chamada">
+                        <option value="Reingresso">
+                        <option value="Trancamento de disciplina">
+                        <option value="Trancamento de matricula">
+                        <option value="Outros">
+                    </datalist>
+                </div>
 
-            
-            <div class="col-md-12">
-                <label for="exampleFormControlTextarea1" class="form-label">Especificar</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <div class="col-md-12">
-                <label for="exampleFormControlTextarea1" class="form-label">Justificar</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <div class="mb-2">
-                <label for="formFileMultiple" class="form-label">Anexo</label>
-                <input class="form-control" type="file" id="formFileMultiple" multiple>
-            </div>
-        </form>
+                
+                <div class="col-md-12">
+                    <label for="exampleFormControlTextarea1" class="form-label">Especificar</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="col-md-12">
+                    <label for="exampleFormControlTextarea1" class="form-label">Justificar</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="mb-2">
+                    <label for="formFileMultiple" class="form-label">Anexo</label>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple>
+                </div>
+            </form>
+            <section class="container mb-4">
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary" type="button">Solicitar requerimento</button>
+                </div>
+            </section>
+    </div>
+</div>
         
         
-        <section class="container mb-4">
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary" type="button">Solicitar requerimento</button>
-            </div>
-        </section>
         {% endblock content %}
