@@ -16,10 +16,14 @@ class Requerimento(models.Model):
     naturalidade = models.CharField(max_length=65)
     filiacao = models.CharField(max_length=65)
     curso = models.CharField(max_length=65)
-    periodo = models.CharField(max_length=10)
+    periodo = models.CharField(max_length=35)
     turno = models.CharField(max_length=65)
     telefone = models.CharField(max_length=65)
-    especificar = models.CharField(max_length=65)
-    justificar = models.CharField(max_length=65)
+    especificar = models.TextField()
+    justificar = models.TextField()
     feito = models.BooleanField(default=False)
     data_solicitacao = models.DateTimeField(auto_now_add=True)
+    tipo = models.ForeignKey(Tipo, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self) -> str:
+        return self.tipo
