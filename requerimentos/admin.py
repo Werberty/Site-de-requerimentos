@@ -1,14 +1,11 @@
 from django.contrib import admin
-from .models import Tipo, Requerimento
+from .models import Requerimento
 
 
-class TipoAdmin(admin.ModelAdmin):
-    ...
+# class TipoAdmin(admin.ModelAdmin):
+#     ...
 
 
 @admin.register(Requerimento)
 class RequerimentoAdmin(admin.ModelAdmin):
     ...
-
-
-admin.site.register(Tipo, TipoAdmin)
