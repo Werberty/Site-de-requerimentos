@@ -1,8 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Requerimento
 
 from requerimentos.forms import formRequerimento
+
+from .models import Requerimento
 
 
 def home(request):
@@ -20,13 +21,12 @@ def historico(request):
 
 
 def solicita_requerimento(request):
-    if request.method == 'POST':
-        form = formRequerimento(request.POST)
-        if form.is_valid():
-            form.save()
-        else:
-            return HttpResponse('ERRO')
+    form = formRequerimento(request.POST)
+    if form.is_valid():
+        form.save()
+    else:
+        return HttpResponse('ERRO')
 
-        return render(request, 'requerimentos/pages/home.html', context={
-            'form': form
-        })
+    return render(request, 'requerimentos/pages/home.html', context={
+        'form': form
+    })

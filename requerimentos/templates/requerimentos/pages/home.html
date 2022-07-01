@@ -8,7 +8,7 @@
 
 <div class="d-flex justify-content-center mt-4">
     <div class="card container" style="width: 65rem;">
-        <form action="{% url 'solicita_requerimento' %}" method="POST" class="row g-3 d-flex m-4">
+        <form action="{% url 'solicita_requerimento' %}" method="POST" class="row g-3 d-flex m-4" enctype="multipart/form-data">
             {% csrf_token %}
             <table>
                 {{ form|crispy }}

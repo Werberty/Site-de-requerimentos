@@ -42,7 +42,7 @@ class Requerimento(models.Model):
     status = models.CharField(max_length=1, choices=STATUS, default='A')
     data_solicitacao = models.DateTimeField(auto_now_add=True)
     anexo = models.FileField(
-        upload_to='requerimento/anexo/%Y/%m/%d/', blank=True, default='')
+        upload_to='requerimento/anexo/%Y/%m/%d/', blank=True)
     tipo = models.CharField(max_length=30, choices=TIPOS)
 
     def __str__(self) -> str:
