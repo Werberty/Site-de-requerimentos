@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Requerimento
 
 from requerimentos.forms import formRequerimento
 
@@ -12,7 +13,10 @@ def home(request):
 
 
 def historico(request):
-    return render(request, 'requerimentos/pages/historico.html')
+    requerimentos = Requerimento.objects.all()
+    return render(request, 'requerimentos/pages/historico.html', context={
+        'requerimentos': requerimentos,
+    })
 
 
 def solicita_requerimento(request):
