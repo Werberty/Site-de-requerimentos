@@ -19,11 +19,9 @@ def solicita_requerimento(request):
     if request.method == 'POST':
         form = formRequerimento(request.POST)
         if form.is_valid():
-            form = formRequerimento()
             form.save()
-            return render(request, 'requerimentos/pages/home.html', context={
-                'form': form
-            })
+        else:
+            return HttpResponse('ERRO')
 
         return render(request, 'requerimentos/pages/home.html', context={
             'form': form
