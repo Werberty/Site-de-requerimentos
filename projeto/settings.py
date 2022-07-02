@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 
+from django.contrib.messages import constants as messages
 from dotenv import find_dotenv, load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -141,3 +142,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# Mensagens
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'alert-danger',
+    messages.WARNING: 'alert-warning',
+    messages.DEBUG: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.INFO: 'alert-info',
+}

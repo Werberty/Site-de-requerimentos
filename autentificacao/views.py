@@ -1,6 +1,4 @@
-from ast import Return
-
-from django.contrib import auth
+from django.contrib import auth, messages
 from django.contrib.auth import authenticate, get_user_model
 from django.contrib.auth import login as login_django
 from django.contrib.auth.decorators import login_required
@@ -22,9 +20,13 @@ def login(request):
 
         if user:
             login_django(request, user)
+            messages.add_message(request, messages.INFO,
+                                 'Seja bem vindo! Faça seu requerimento aqui:')
             return redirect('/home')
         else:
-            return HttpResponse('Invalido')
+            messages.add_message(request, messages.ERROR,
+                                 'Email ou senha invalido!')
+            return render(request, 'autentificacao/login.html')
 
 
 def logout(request):
