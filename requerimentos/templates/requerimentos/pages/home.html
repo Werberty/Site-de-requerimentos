@@ -10,9 +10,47 @@
         <div class="card container" style="width: 65rem;">
             <form action="{% url 'solicita_requerimento' %}" method="POST" class="row g-3 d-flex m-4" enctype="multipart/form-data">
                 {% csrf_token %}
-                <table>
-                    {{ form|crispy }}
-                </table>
+                
+                <div class="col-md-6">
+                    {{ form.requerente|as_crispy_field }}
+                </div>
+                <div class="col-md-6">
+                    {{ form.matricula|as_crispy_field }}
+                </div>
+                <div class="col-md-2">
+                    {{ form.data_nascimento|as_crispy_field }}
+                </div>
+                <div class="col-md-4">
+                    {{ form.naturalidade|as_crispy_field }}
+                </div>
+                <div class="col-md-6">
+                    {{ form.filiacao|as_crispy_field }}
+                </div>
+                <div class="col-md-4">
+                    {{ form.curso|as_crispy_field }}
+                </div>
+                <div class="col-md-2">
+                    {{ form.periodo|as_crispy_field }}
+                </div>
+                <div class="col-md-2">
+                    {{ form.turno|as_crispy_field }}
+                </div>
+                <div class="col-md-4">
+                    {{ form.telefone|as_crispy_field }}
+                </div>
+                <div class="col-md-6">
+                    {{ form.tipo|as_crispy_field }}
+                </div>
+                <div class="col-md-6">
+                    {{ form.anexo|as_crispy_field }}
+                </div>
+                <div class="col-md-12">
+                    {{ form.especificar|as_crispy_field }}
+                </div>
+                <div class="col-md-12">
+                    {{ form.justificar|as_crispy_field }}
+                </div>
+                
                 <input class="btn btn-primary" type="submit" value="Enviar">
             </form>
         </div>
