@@ -18,16 +18,19 @@
                     <ul class="list-group list-group-flush">
                     <li class="list-group-item">{{ requerimento.data_solicitacao }}</li>
                     {% if requerimento.status == 'A' %}
-                        <li class="list-group-item">Em analise</li>
+                        <li class="list-group-item">
+                            <span class="badge text-bg-primary">Em análise</span>
+                        </li>
                     {% elif requerimento.status == 'C' %}
-                        <li class="list-group-item">Concluido</li>
+                        <li class="list-group-item">
+                            <span class="badge text-bg-success">Concluido</span>
+                        </li>
                     {% else %}
-                        <li class="list-group-item">Rejeitado</li>
+                        <li class="list-group-item">
+                            <span class="badge text-bg-danger">Rejeitado</span>
+                        </li>
                     {% endif %}
                     </ul>
-                    <div class="card-body">
-                    <a href="#" class="card-link">Ver detalhes</a>
-                    </div>
                 </div>
             {% endfor %}
             
