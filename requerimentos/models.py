@@ -36,7 +36,7 @@ class Requerimento(models.Model):
     curso = models.CharField(max_length=255)
     periodo = models.CharField(max_length=35)
     turno = models.CharField(max_length=1, choices=TURNOS)
-    telefone = models.CharField(max_length=14)
+    telefone = models.CharField(max_length=15)
     especificar = models.TextField()
     justificar = models.TextField()
     status = models.CharField(max_length=1, choices=STATUS, default='A')
