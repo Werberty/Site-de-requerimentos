@@ -8,7 +8,7 @@
 
     <div class="d-flex justify-content-center mt-4">
         <div class="card container" style="width: 65rem;">
-            <form action="{% url 'solicita_requerimento' %}" method="POST" class="row g-3 d-flex m-4" enctype="multipart/form-data">
+            <form action="{% url 'solicita_requerimento' user.id %}" method="POST" class="row g-3 d-flex m-4" enctype="multipart/form-data">
                 {% include 'requerimentos/partials/messages.html' %}
                 {% csrf_token %}
                 

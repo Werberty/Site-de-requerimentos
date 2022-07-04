@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -18,25 +19,27 @@ def home(request):
 
 @login_required(login_url='/auth/login')
 def historico(request):
-    requerimentos = Requerimento.objects.all()
+    requerimentos = Requerimento.objects.filter(aluno=request.user)
     return render(request, 'requerimentos/pages/historico.html', context={
         'requerimentos': requerimentos,
     })
 
 
 @login_required(login_url='/auth/login')
-def solicita_requerimento(request):
+def solicita_requerimento(request, id):
     form = formRequerimento(request.POST, request.FILES)
 
     if not form.is_valid():
         messages.add_message(request, messages.ERROR,
-                             'Algum campo está preenchido incorreto.')
+                             'Formulário inválido.')
         form = formRequerimento(request.POST)
         return render(request, 'requerimentos/pages/home.html', context={
             'form': form
         })
 
-    form.save()
+    reque = form.save(commit=False)
+    reque.aluno_id = id
+    reque.save()
     messages.add_message(request, messages.SUCCESS,
                          'Requerimento feito com sucesso!')
     form = formRequerimento()

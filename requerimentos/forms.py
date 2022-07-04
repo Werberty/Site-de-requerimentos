@@ -22,6 +22,7 @@ class formRequerimento(forms.ModelForm):
             'especificar',
             'justificar',
             'anexo',
+            'aluno',
         )
 
     def __init__(self, *args, **kwargs) -> None:

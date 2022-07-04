@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 
@@ -28,6 +29,8 @@ class Requerimento(models.Model):
         ('Outros', 'Outros'),
     )
 
+    aluno = models.ForeignKey(
+        User, on_delete=models.CASCADE, null=True, blank=True)
     requerente = models.CharField(max_length=255)
     matricula = models.CharField(max_length=14)
     data_nascimento = models.DateField()
