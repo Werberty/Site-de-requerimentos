@@ -30,7 +30,7 @@ class Requerimento(models.Model):
     )
 
     aluno = models.ForeignKey(
-        User, on_delete=models.CASCADE, null=True, blank=True)
+        User, on_delete=models.DO_NOTHING, null=True, blank=True)
     requerente = models.CharField(max_length=255)
     matricula = models.CharField(max_length=14)
     data_nascimento = models.DateField()

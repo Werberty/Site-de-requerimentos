@@ -19,7 +19,8 @@ def home(request):
 
 @login_required(login_url='/auth/login')
 def historico(request):
-    requerimentos = Requerimento.objects.filter(aluno=request.user)
+    requerimentos = Requerimento.objects.filter(
+        aluno=request.user).order_by('-id')
     return render(request, 'requerimentos/pages/historico.html', context={
         'requerimentos': requerimentos,
     })
