@@ -1,4 +1,5 @@
 from dataclasses import fields
+from wsgiref.validate import validator
 
 from django import forms
 
@@ -31,3 +32,25 @@ class formRequerimento(forms.ModelForm):
             {'class': 'mask-data'})
         self.fields['telefone'].widget.attrs.update(
             {'class': 'mask-telefone'})
+
+    def clean_especificar(self):
+        data = self.cleaned_data["especificar"]
+        if len(data) < 10:
+            raise forms.ValidationError(
+                'Campo possui menos que 10 caracteres.')
+        return data
+
+    def clean_justificar(self):
+        data = self.cleaned_data["justificar"]
+        if len(data) < 10:
+            raise forms.ValidationError(
+                'Campo possui menos que 10 caracteres.')
+        return data
+
+    def clean_matricula(self):
+        data = self.cleaned_data["matricula"]
+        try:
+            data = int(data)
+        except:
+            raise forms.ValidationError('Valido somente números.')
+        return data
