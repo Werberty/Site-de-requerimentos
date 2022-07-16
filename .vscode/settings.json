@@ -2,7 +2,7 @@
     "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
     "workbench.iconTheme": "material-icon-theme",
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "editor.fontSize": 16,
     "python.languageServer": "Pylance", // ms-python.vscode-pylance
     "python.testing.unittestEnabled": false, // ms-python.python
