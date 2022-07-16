@@ -10,9 +10,7 @@ Um sistema em que alunos possam fazer os mais diversos tipos requerimentos para 
 
 
 ## :camera: Layout web
-![Web 1](https://github.com/Werberty/Site-de-requerimentos/blob/main/assets/req1.png)
-![Web 2](https://github.com/Werberty/Site-de-requerimentos/blob/main/assets/req3.png)
-![Web 3](https://github.com/Werberty/Site-de-requerimentos/blob/main/assets/req2.png)
+![Web 1](https://github.com/Werberty/Site-de-requerimentos/blob/main/assets/site-de-requerimentos-3.gif)
 
 ## :computer: Tecnologias utilizadas
 - Python
