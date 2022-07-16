@@ -1,5 +1,4 @@
 # Site de requerimentos
-(Desenvolvimento em andamento)
 
 ## :clipboard: Sobre o projeto
 
